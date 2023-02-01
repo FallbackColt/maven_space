@@ -1,0 +1,84 @@
+/*
+style
+|___border      设置边框的样式、宽度、颜色
+    |___border-width    边框宽度
+    |___border-color    边框颜色
+    |___border-style    边框样式
+        |___none        无边框，默认值
+        |___hidden      隐藏边框
+        |___dotted      点线
+        |___dashed      虚线
+        |___solid       实线边框
+        |___double      双线边框
+*/
+
+/*
+margin-left和margin-right组合可以使div标签居中
+ */
+div{
+    border: 1px solid #f00b0b;
+    color: blue;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span{
+    border: 3px dashed #46a09e;
+    color: green;
+    font-size: 20px;
+}
+
+/*
+超链接无下划线
+ */
+a{
+    text-decoration: none;
+}
+
+/*
+id选择器
+ */
+#id001{
+    color: blue;
+    font-size: 30px;
+    border: 1px green solid;
+}
+
+#id002{
+    color: rebeccapurple;
+    font-size: 20px;
+    border: 3px chocolate dotted ;
+}
+
+/*
+class选择器
+ */
+
+.class01{
+    color: blue;
+    font-size: 30px;
+    border: 1px solid yellow;
+}
+
+.class02{
+    color: grey;
+    font-size: 26px;
+    border: 3px solid pink;
+}
+
+/*
+组合选择器
+ */
+.class03, #id003{
+    color: blueviolet;
+    font-size: 28px;
+    border: 1px grey solid;
+}
+
+.class04, #id004{
+    color: chartreuse;
+    font-size: 30px;
+    border: 3px firebrick dotted;
+}
+

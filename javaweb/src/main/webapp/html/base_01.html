@@ -2,7 +2,7 @@
 <html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
-    <title>HTML基础语法</title>
+    <title>HTML基础语法01</title>
 </head>
 
 <!--
@@ -43,7 +43,7 @@
     -->
     <a href="http://www.baidu.com">百度</a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="http://www.baidu.com" target="_self">百度_本页面跳转</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="http://www.baidu.com" target="_blank">百度_新页面跳转</a><br/>
+    <a href="http://www.baidu.com" target="_blank">百度_新页面跳转</a><br>
 
 
     <!--
@@ -76,8 +76,9 @@
         |___border  边框宽度
         |___alt     指定路径找不到时警示的文本内容
     -->
-    <img src="no.png" width="100px" height="100px" alt="目标路径图片不存在"/>
-    <img src="test.png" width="100px" height="100px" border="2px"/>
+    <img src="no.png" width="100px" height="100px" alt="目标路径图片不存在">
+    <img src="../data_test/test.png" width="100px" height="100px" border="2px">
+
 
     <!--
         table       表格标签
@@ -116,10 +117,26 @@
         </tr>
     </table>
 
+    <br>
+    <br>
+
     <!--
         iframe      单独的窗口
+        iframe和a组合使用时
+        1. 在iframe中使用name属性定义一个名称
+        2. 在a中的target=iframe的name
     -->
-    <iframe src="" width="400px" height="400px"/>
+    <iframe src="../data_test/iframe_test_01.html" width="400px" height="200px" name="iframe_01"></iframe>
+    <br>
+
+    <ul>
+        <li><a href="../data_test/iframe_test_01.html" target="iframe_01">标题</a></li>
+        <li><a href="../data_test/iframe_test_02.html" target="iframe_01">无序列表</a></li>
+        <li><a href="../data_test/iframe_test_03.html" target="iframe_01">图片</a></li>
+    </ul>
+
+    <br>
+    <br>
 
 </body>
 </html>
