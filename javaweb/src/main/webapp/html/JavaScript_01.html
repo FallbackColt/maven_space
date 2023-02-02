@@ -1,3 +1,15 @@
+<!--
+    1. 适用动态注册事件的经典场景？
+        如果在js中声明了相应的方法，那么直接在标签中静态注册事件调用即可
+        实践过程中发现将相应事件赋值给window.onload，使得网页在加载完页面后加载声明的注册事件的方法，
+        多个方法的加载会使得之前的window.onload被覆盖，只有最后一个方法有效，
+        我想到的解决办法是声明多个方法，然后全部在window.onload里面调用一遍，这样不会造成覆盖，
+        但是觉得太过繁琐，直接在标签中静态注册事件调用js文件中的方法即可，所以好奇适用动态注册事件的经典场景
+    2. 加载完页面后，静态注册事件是否都全部加载？
+        猜想是要么全部加载，要么是触发事件后即时加载这两种情况
+
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +22,47 @@
         除非使用两个script标签分别用来引用和定义
     -->
     <script type="text/javascript" src="../data_test/test.js"></script>
-<!--    <script type="text/javascript">-->
-<!--        alert("定义js");-->
-<!--    </script>-->
+
+    <script type="text/javascript">
+        /*
+
+         */
+        window.onload = function () {
+            onclickObj();
+            onblurObj();
+        }
+    </script>
 
 </head>
 <body>
 
+    <button onclick="fun1()">fun1</button>
+    <button id="btn01">fun2</button>
+    <br>
+    用户名：<input type="text" id="username" value="" onblur="check('username', 'checkspan')">
+    <span id="checkspan">5-12位数字、字母或下划线</span>
+    <br>
+    密码：<input type="password" name="password"><br>
+
+    <select name="country" id="sel01" onchange="onchangeObj()">
+        <option value="NONE">---请选择国籍---</option>
+        <option selected="selected" value="CN">中国</option>
+        <option value="USA">美国</option>
+        <option value="Ru">俄罗斯</option>
+    </select>
+    <br>
+
+    <input type="checkbox" checked="checked" name="hobby" value="Java">Java
+    <input type="checkbox" name="hobby" value="C++">C++
+    <input type="checkbox" name="hobby" value="JavaScript">JavaScript
+    <br>
+    <button onclick="checkAll();">全选</button>
+    <button onclick="checkNone();">全不选</button>
+    <button onclick="reverseAll();">反选</button>
+
+
+    <form action="http://localhost:8080" method="get" target="_blank" onsubmit="onsubmitObj()">
+        <input id="sub01" type="submit" value="提交">
+    </form>
 </body>
 </html>
