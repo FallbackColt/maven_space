@@ -5,12 +5,95 @@
     <title>JQuery</title>
     <script type="text/javascript" src="../data_test/jquery-3.6.3.js"></script>
     <script type="text/javascript">
-        $(function () {
-           let $btn01Obj = $("#btn01");
-           $btn01Obj.click(function () {
-               alert("JQuery的单击事件");
-           });
-        });
+        /*
+            jquery选择器：
+            $("#id")        id选择器
+            $("div")        标签选择器
+            $(".class")     类选择器
+            $("*")          全选选择器
+            $("#id, div")   组合选择器
+         */
+
+        /*
+            jquery层级选择器：
+            $("body div")       选择body内所有的div
+            $("body > div")     选择body子元素的div(子元素的子元素不算)
+            $("span+div")       选择span下一个为div的div(span下一个兄弟元素为div的div)
+            $("span~div")       选择span后所有的div(span之后兄弟元素为div的所有div)
+         */
+        /*
+            jquery基本过滤选择器：
+            $("li:first")               选择第一个li
+            $("li:last")                选择最后一个li
+            $("input:not(:checked)")    选择没有checked属性的input标签
+            $(":header)")               选择标题标签(h1、h2等)
+            $("tr:even")                选择所有索引为偶数的元素(从0开始)
+            $("tr:odd")                 选择所有索引为奇数的元素(从0开始)
+            $("tr:eq(n)")               选择第n个tr标签
+            $("tr:gt(n)")               选择所有大于第n个tr标签
+            $("tr:lt(n)")               选择所有小于第n个tr标签
+            $("tr:lt(n)")               选择所有小于第n个tr标签
+            $(":animated")              选择所有正在执行动画的元素
+         */
+        /*
+            jquery内容过滤选择器：
+            $("div:contain(text)")      选择包含有text文本的div元素
+            $("td:empty")               选择所有不包含子元素或文本的空td元素
+            $("td:parent")              选择所有不含子元素或文本的td元素
+            $("div:has(selector)")      选择div中有selector的div元素
+         */
+        /*
+            jquery属性过滤选择器：
+            $("div[id]")                选择所有含有id属性的div元素
+            $("div[id=value]")          选择所有id=value的div元素
+            $("div[id!=value]")         选择所有id!=value的div元素
+            $("div[id^=value]")         选择所有以value开头的div元素
+            $("div[id$=value]")         选择所有以value结尾的div元素
+            $("div[id*=value]")         选择所有包含value的div元素
+            $("div[selector1 selector2 selectorN]") 复合属性过滤选择器
+         */
+        /*
+            jquery表单过滤选择器：
+            $(":input")                选择所有的input、textarea、select、button元素
+            $(":text")                 选择所有的单行文本框
+            $(":password")             选择所有的密码框
+            $(":radio")                选择所有的单选按钮
+            $(":checkbox")             选择所有的单选按钮
+            $(":submit")               选择所有的提交按钮
+            $(":reset")                选择所有的重置按钮
+            $(":button")               选择所有的按钮
+            $(":file")                 选择所有的文件域
+            $(":hidden")               选择所有的不可见或者type="hidden"的元素
+         */
+        /*
+            jquery表单过滤选择器：
+            $().html()                 设置和获取起始标签和结束标签中的内容，如dom中的innerHTML
+            $().text()                 设置和获取起始标签和结束标签中的文本，如dom中的innerText
+            $().val()                  设置和获取表单项中的value属性值，如dom中的value
+         */
+        /*
+            jquery属性：
+            $().attr()                 设置和获取属性的值，不推荐操作checked、readOnly、selected、disabled等
+            $().prop()                 设置和获取属性的值，只推荐操作checked、readOnly、selected、disabled等
+         */
+        $(
+            function () {
+                let $btn01Obj = $("#btn01");
+                $btn01Obj.click(function () {
+                    alert("JQuery的单击事件");
+                });
+                let btnObj = document.getElementById("btn01");
+                alert(btnObj);
+                /*
+                    dom对象外套一个$，变成jquery对象
+                    jquery对象[索引] 取出对应的dom对象
+                 */
+                alert($(btnObj));
+                alert($(btnObj)[0]);
+            }
+
+
+        );
     </script>
 </head>
 <body>
