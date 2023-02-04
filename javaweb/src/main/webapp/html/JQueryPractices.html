@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQUERY练习</title>
+    <link rel="stylesheet" type="text/css" href="../data_test/jquery.css">
+    <script type="text/javascript" src="../data_test/jquery-3.6.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            // 选中添加到右边
+            $("button:eq(0)").click(function () {
+                /*
+                    a.appendTo(b)       将a加到b后面
+                    b.append(a)         将b后面加到a
+                 */
+                // $("select:eq(0) option:selected").appendTo($("select:eq(1)"));
+                $("select:eq(1)").append($("select:eq(0) option:selected"));
+
+            });
+
+            // 全部添加到右边
+            $("button:eq(1)").click(function () {
+
+                $("select:eq(1)").append($("select:eq(0) option"));
+            });
+
+            // 选中删除到左边
+            $("button:eq(2)").click(function () {
+
+                $("select:eq(0)").append($("select:eq(1) option:selected"));
+            });
+
+            // 全部删除到左边
+            $("button:eq(3)").click(function () {
+
+                $("select:eq(0)").append($("select:eq(1) option"));
+            });
+
+            // 删除用户事件
+            var deleteFun = function () {
+                var $trObj = $(this).parent().parent();
+                // confirm是提示框函数
+                if (confirm("是否删除员工" + $trObj.find("td:eq(0)").text() + "?")) {
+                    $trObj.remove();
+                }
+                return false;
+            }
+
+            // 添加新员工
+            $("#addEmpBtn").click(function () {
+
+                var $trObj01 = $("<tr><td>" + $("#empName").val() +
+                "</td><td>" + $("#email").val() +
+                "</td><td>" + $("#salary").val() +
+                "</td><td><a href='deleteEmp?id=004'" +
+                ">Delete</a></td></tr>" );
+                $trObj01.appendTo($("#employeeTable"));
+
+                // 补绑新增的员工对应的删除事件
+                $trObj01.find("a").click(deleteFun);
+
+
+            });
+
+            // 删除员工
+            $("a").click(deleteFun);
+
+        });
+    </script>
+</head>
+<body>
+    <div id="div_left">
+        <select multiple="multiple" name="sel01">
+            <option value="opt01">选项1</option>
+            <option value="opt02">选项2</option>
+            <option value="opt03">选项3</option>
+            <option value="opt04">选项4</option>
+            <option value="opt05">选项5</option>
+            <option value="opt06">选项6</option>
+            <option value="opt07">选项7</option>
+            <option value="opt08">选项8</option>
+        </select>
+
+        <button type="button">选中添加到右边</button>
+        <button type="button">全部添加到右边</button>
+    </div>
+
+    <div id="div_right">
+        <select multiple="multiple" name="sel01"></select>
+
+        <button type="button">选中删除到左边</button>
+        <button type="button">全部删除到左边</button>
+    </div>
+
+    <table id="employeeTable" border="solid" cellspacing="0">
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Salary</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>tom@tom.com</td>
+            <td>5000</td>
+            <td><a href="deleteEmp?id=001">Delete</a> </td>
+        </tr>
+        <tr>
+            <td>Jerry</td>
+            <td>jerry@sohu.com</td>
+            <td>8000</td>
+            <td><a href="deleteEmp?id=002">Delete</a> </td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>Bob@tom.com</td>
+            <td>10000</td>
+            <td><a href="deleteEmp?id=003">Delete</a> </td>
+        </tr>
+    </table>
+    <br>
+
+    <div>
+        <table>
+            <tr><td colspan="2">添加新员工</td></tr>
+            <tr>
+                <td class="word">name:</td>
+                <td class="inp">
+                    <input type="text" name="empName" id="empName">
+                </td>
+            </tr>
+            <tr>
+                <td class="word">email:</td>
+                <td class="inp">
+                    <input type="text" name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td class="word">salary:</td>
+                <td class="inp">
+                    <input type="text" name="salary" id="salary">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button id="addEmpBtn" value="abc">Submit</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+</html>
