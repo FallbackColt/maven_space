@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS样式操作</title>
+    <style type="text/css">
+
+        div{
+            width: 100px;
+            height: 260px;
+        }
+
+        div.whiteBorder{
+            border: 2px white solid;
+        }
+
+        div.redDiv{
+            background-color: red;
+        }
+
+        div.blueBorder{
+            border: 5px blue solid;
+        }
+
+    </style>
+    <script type="text/javascript" src="../data_test/jquery-3.6.3.js"></script>
+    <script type="text/javascript">
+
+        $(function (){
+
+            var $divEle = $("div:first");
+
+            // 添加样式 addClass()
+            $("#btn01").click(function () {
+                $divEle.addClass("redDiv blueBorder");
+            });
+
+            // 删除样式 removeClass()
+            $("#btn02").click(function () {
+                $divEle.removeClass("blueBorder");
+                // $divEle.removeClass(); // removeClass所有样式
+            });
+
+            // 样式切换，有则删除，无则添加 toggleClass()
+            $("#btn03").click(function () {
+                $divEle.toggleClass("redDiv");
+            });
+
+            // 返回或者设置第一个元素相对于文档的位置 offset()
+            $("#btn04").click(function () {
+                console.log($divEle.offset());
+                // 设置位置
+                $divEle.offset({
+                    top: 100,
+                    left: 100,
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+    <table align="center">
+
+        <tr>
+            <td>
+                <div class="border">
+                </div>
+            </td>
+
+            <td>
+                <div class="btn">
+                    <!--添加样式-->
+                    <input type="button" value="addClass()" id="btn01">
+                    <!--移除样式-->
+                    <input type="button" value="removeClass()" id="btn02">
+                    <!--样式切换，有则删除，无则添加-->
+                    <input type="button" value="toggleClass()" id="btn03">
+                    <!--返回或设置第一个元素相对于文档的位置-->
+                    <input type="button" value="offset()" id="btn04">
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

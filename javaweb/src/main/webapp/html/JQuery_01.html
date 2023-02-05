@@ -76,8 +76,7 @@
             $().attr()                 设置和获取属性的值，不推荐操作checked、readOnly、selected、disabled等
             $().prop()                 设置和获取属性的值，只推荐操作checked、readOnly、selected、disabled等
          */
-        $(
-            function () {
+        $(function () {
                 let $btn01Obj = $("#btn01");
                 $btn01Obj.click(function () {
                     alert("JQuery的单击事件");
@@ -90,15 +89,12 @@
                  */
                 alert($(btnObj));
                 alert($(btnObj)[0]);
-            }
-
-
-        );
+        });
     </script>
 </head>
 <body>
 
     <button id="btn01">按钮</button>
-    
+
 </body>
 </html>
