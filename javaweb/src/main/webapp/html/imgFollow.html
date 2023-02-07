@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片跟随</title>
+    <style type="text/css">
+
+        body {
+            text-align: center;
+        }
+
+        #small {
+            margin-top: 150px;
+        }
+
+        #showBig {
+            position: absolute;
+            display: none;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../data_test/jquery-3.6.3.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("#small").bind("mouseover mouseout mousemove", function (event) {
+                if(event.type==="mouseover") {
+                    $("#showBig").show();
+                } else if(event.type==="mouseout") {
+                    $("#showBig").hide();
+                } else if(event.type==="mousemove") {
+                    console.log(event);
+                    $("#showBig").offset({
+                        // 使得鼠标与图片不重叠，并留有一定的位置用来移动鼠标作为缓冲
+                        left: event.pageX + 10,
+                        top: event.pageY + 10,
+                    });
+                }
+            });
+
+        });
+
+    </script>
+
+</head>
+<body>
+
+    <img src="../data_test/small.jpg" id="small">
+    <div id="showBig">
+        <img src="../data_test/big.jpg">
+    </div>
+
+</body>
+</html>
