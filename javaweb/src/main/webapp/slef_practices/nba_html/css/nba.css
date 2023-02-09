@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+
+/*链接样式*/
+a {
+    text-decoration: none;
+}
+
+/*图片与文字居中对齐*/
+img {
+    vertical-align: bottom;
+}
+
+/*td {*/
+/*    border: none;*/
+/*}*/
+
+/*导航选项样式*/
+.options {
+    width: 1887px;
+    height: 200px;
+    background-color: darkblue;
+    float: left;
+    /*padding-left: 400px;*/
+}
+
+/*图片样式*/
+#logoImg {
+    border: darkblue 1px ;
+    background: darkblue;
+    margin-left: 329px;
+}
+
+
+/*表格样式*/
+#table1 {
+    margin-left:329px;
+    margin-right: auto;
+}
+
+#table1 tr td {
+    font-size: 30px;
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*导航字体*/
+.a_navigation {
+    color: cornflowerblue;
+}
+
+/*主体内容样式*/
+.substance {
+    width: 1887px;
+    float: left;
+    background-color: lightblue;
+}
+
+/*图片切换*/
+.toggleImg {
+    margin-bottom: 212px;
+    /*background-color: yellow;*/
+    width: 15px;
+    height: 30px;
+}
+
+/*表格布局*/
+#table2 {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+/*轮播图*/
+#turnsImg {
+    width: 731px;
+    height: 450px;
+}
+
+/*要闻*/
+#newsMessage {
+    width: 492px;
+    height: 450px;
+}
+
+#div01 {
+    width: 496px;
+    height: 454px;
+}
+
+/*背景图片*/
+#imgDiv {
+    width: 472px;
+    height: 60px;
+    margin: 10px 5px 10px 5px;
+    background-image: url(../image/news.png);
+    background-size: 150% 150%;
+    font-size: 30px;
+    color: white;
+}
+
+/*要闻*/
+#imgDiv span {
+    font-size: 30px;
+    margin: 10px 1px 5px 5px;
+}
+
+/*要闻索引*/
+.news {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+/*要闻索引链接*/
+.a_news {
+    color: black;
+}
+
+
+/*新闻资讯*/
+#newsImg {
+    width: 731px;
+    height: 1400px;
+}
+
+#newsImg div {
+    width: 728px;
+    height: 1398px;
+}
+
+/*新闻资讯icon*/
+#newsInfo {
+    height: 40px;
+}
+
+/*新闻资讯*/
+#newsInfo+span {
+    font-size: 38px;
+    color: darkblue;
+}
+
+/*资讯图片表格*/
+#table3 {
+    border-collapse: collapse;
+    border: none;
+}
+
+#bigImg {
+    width: 720px;
+    height: 494px;
+    border: none;
+}
+
+/*调整图片大小*/
+.newsInfoImgs {
+    width: 358px;
+    height: 256px;
+    border: none;
+}
+
+
+/*排名*/
+#rank {
+    width: 492px;
+    height: 1400px;
+}
+
+#div02 {
+    margin-top: 40px;
+    width: 466px;
+    height: 1400px;
+    /*float: left;*/
+}
+
+/*排名*/
+.sort {
+    alignment: center;
+    font-size: 34px;
+    color: black;
+    vertical-align: bottom;
+    width: 220px;
+    padding: 0 25px 0 55px ;
+}
+
+
+.legends {
+    alignment: center;
+    font-size: 28px;
+    color: black;
+    vertical-align: bottom;
+    width: 220px;
+    padding: 0 30px 0 30px ;
+
+}
+
+/*联盟icon*/
+.legends img {
+    width: 44px;
+    height: 45px;
+}
+
+/*排名表*/
+#table4 {
+    margin-left: 24px;
+    border: solid 1px grey;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#table4 td, th {
+    font-size: 20px;
+    border: grey solid 1px;
+    margin: 0;
+}
+
+/*新闻详情页位置*/
+.newsSubstance {
+    margin-left: 328px;
+    margin-right: 328px;
+    background-color: whitesmoke;
+}
+
+
+/*标题*/
+h1 {
+    padding-top: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+/*标题下方小字*/
+#p1 {
+    font-size: 26px;
+    text-align: center;
+}
+
+/*新闻详情页图片*/
+.newsImgs {
+    margin-left: 300px;
+}
+
+/*新闻详情页内容*/
+.contents {
+    font-size: 35px;
+    text-indent: 2em;
+    margin-left: 100px;
+}
+

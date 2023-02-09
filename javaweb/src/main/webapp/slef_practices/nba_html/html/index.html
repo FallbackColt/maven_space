@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>NBA中国官方网站首页</title>
+    <link type="text/css" href="../css/nba.css" rel="stylesheet">
+    <script type="text/javascript" src="../script/jquery-3.6.3.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            // $("input").click(function () {
+            //     alert("dsadsadas");
+            // })
+        })
+
+    </script>
+
+</head>
+<body>
+
+
+<!--第一个div，页面上方选项的布局-->
+<div class="options">
+
+    <img id="logoImg" src="../image/logo.png" alt="相对路径图片丢失">
+
+    <table id="table1">
+        <tr>
+            <td><a href="#" class="a_navigation"><span>首页</span></a></td>
+            <td><a href="#" class="a_navigation"><span>视频</span></a></td>
+            <td><a href="#" class="a_navigation"><span>新闻</span></a></td>
+            <td><a href="#" class="a_navigation"><span>图集</span></a></td>
+            <td><a href="#" class="a_navigation"><span>球队</span></a></td>
+            <td><a href="#" class="a_navigation"><span>球员</span></a></td>
+            <td><a href="#" class="a_navigation"><span>赛程</span></a></td>
+            <td><a href="#" class="a_navigation"><span>排名</span></a></td>
+            <td><a href="#" class="a_navigation"><span>数据</span></a></td>
+            <td><a href="#" class="a_navigation"><span>专题</span></a></td>
+            <td><a href="#" class="a_navigation"><span>更多</span></a></td>
+            <td>
+                <a href="#" class="a_navigation"><span>登录</span></a>
+                <img src="../image/login.png">
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<!--第二个div，首页主题内容的布局-->
+<div class="substance">
+
+    <!--四个区域-->
+    <table id="table2">
+        <tr>
+            <td id="turnsImg">
+                <img class="toggleImg" src="../image/icon1.png" alt="相对路径图片丢失">
+                <img src="../image/banner1.jpg" alt="相对路径图片丢失">
+                <img class="toggleImg" src="../image/icon2.png" alt="相对路径图片丢失">
+            </td>
+            <td id="newsMessage">
+                <div id="div01">
+                    <div id="imgDiv">
+                        <span>要闻</span>
+                    </div>
+                    <a href="#" class="a_news">
+                        <span class="news">赛季首砍两双 梅杰里：这个赛季太不容易1</span><br>
+                    </a>
+                    <a href="#" class="a_news">
+                        <span class="news">赛季首砍两双 梅杰里：这个赛季太不容易2</span><br>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="newsImg">
+                <div>
+                    <div>
+                        <img id="newsInfo" src="../image/icon3.png" alt="相对路径图片丢失">
+                        <span>新闻资讯</span>
+                        <hr color="#9393E9">
+
+                        <table id="table3" width="200px" height="200px">
+                            <tr>
+                                <td><img class="newsInfoImgs" src="../image/new01.jpg" alt="相对路径图片丢失"></td>
+                                <td><img class="newsInfoImgs" src="../image/new02.jpg" alt="相对路径图片丢失"></td>
+                            </tr>
+                            <tr>
+                                <td><img class="newsInfoImgs" src="../image/new03.jpg" alt="相对路径图片丢失"></td>
+                                <td><img class="newsInfoImgs" src="../image/new04.jpg" alt="相对路径图片丢失"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <img id="bigImg" src="../image/new06.jpg" alt="相对路径图片丢失">
+                                </td>
+
+                            </tr>
+                        </table>
+
+                    </div>
+
+
+                </div>
+            </td>
+            <td id="rank">
+                <div id="div02">
+                    <div style="margin-left: 25px; background-color: darkgray">
+                        <span class="sort">联盟排名</span>
+                        <span class="sort">分区排名</span>
+                    </div>
+
+
+                    <div style="margin-left: 25px; background-color: lightslategrey">
+                        <span class="legends">
+                            <img src="../image/east.png" alt="相对路径图片丢失">东部联盟
+                        </span>
+                        <span class="legends">
+                            <img src="../image/west.png" alt="相对路径图片丢失">西部联盟
+                        </span>
+                    </div>
+
+                    <table id="table4">
+                        <tr style="font-size: 20px">
+                            <th width="65px">排名</th>
+                            <th width="170px">姓名</th>
+                            <th width="45px">胜</th>
+                            <th width="45px">负</th>
+                            <th width="100px">胜场差</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>c-雄鹿</td>
+                            <td>55</td>
+                            <td>19</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>x-猛龙</td>
+                            <td>51</td>
+                            <td>23</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>x-76人</td>
+                            <td>51</td>
+                            <td>23</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>x-步行者</td>
+                            <td>45</td>
+                            <td>29</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>凯尔特人</td>
+                            <td>43</td>
+                            <td>31</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>篮网</td>
+                            <td>38</td>
+                            <td>36</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>活塞</td>
+                            <td>37</td>
+                            <td>36</td>
+                            <td>17.5</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>热火</td>
+                            <td>36</td>
+                            <td>37</td>
+                            <td>18.5</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>魔术</td>
+                            <td>51</td>
+                            <td>23</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>黄蜂</td>
+                            <td>51</td>
+                            <td>23</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+
+
