@@ -8,17 +8,14 @@
 -->
 
 <books>
-
     <book sn="SN12345678">
         <name>时间简史</name>
         <author>霍金</author>
         <price>100</price>
     </book>
-
     <book sn="SN12345679">
         <name>三体</name>
         <author>刘慈欣</author>
         <price>200</price>
     </book>
-
 </books>
