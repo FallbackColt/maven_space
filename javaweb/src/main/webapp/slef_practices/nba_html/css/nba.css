@@ -147,16 +147,16 @@ img {
     border: none;
 }
 
-#bigImg {
-    width: 720px;
-    height: 494px;
-    border: none;
-}
-
 /*调整图片大小*/
 .newsInfoImgs {
     width: 358px;
     height: 256px;
+    border: none;
+}
+
+#bigImg {
+    width: 720px;
+    height: 494px;
     border: none;
 }
 
@@ -197,8 +197,8 @@ img {
 
 /*联盟icon*/
 .legends img {
-    width: 44px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 }
 
 /*排名表*/
@@ -214,6 +214,12 @@ img {
     border: grey solid 1px;
     margin: 0;
 }
+
+/*高亮*/
+.highlight {
+    color: #F50;
+}
+
 
 /*新闻详情页位置*/
 .newsSubstance {
