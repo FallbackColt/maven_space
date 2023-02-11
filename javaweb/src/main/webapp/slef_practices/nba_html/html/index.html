@@ -46,7 +46,9 @@
 
             // 点击图片跳转对应的详情页，只做了第一张图片的页面
             $(".newsInfoImgs").click(function () {
-                window.location.href = "newsDetail" + this.src[93] + ".html";
+                // alert(this.src)
+                // this.src.length-5 确保部署在网页上时，src的值发生变化，导致索引失效
+                window.location.href = "newsDetail" + this.src[this.src.length-5] + ".html";
             });
 
             // 用于存储高亮标签，第一个位置用来存储sort类的高亮，第二个位置用来存储legends类的高亮
@@ -134,7 +136,7 @@
 
             // 东部与西部联盟排名
             $(".legends").click(function () {
-                alert(this.innerText);
+                // alert(this.innerText);
                 if (array2[1]==="") {
                     array2[1] = this.innerText;
                 } else if (array2[1]===this.innerText) {

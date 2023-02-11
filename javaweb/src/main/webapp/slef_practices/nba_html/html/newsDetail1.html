@@ -9,9 +9,11 @@
     <script type="text/javascript">
 
         $(function () {
-            // $("input").click(function () {
-            //     alert("dsadsadas");
-            // })
+
+            // 点击图片跳转到首页
+            $("#logoImg").click(function () {
+                window.location.href = "index.html";
+            });
         })
 
     </script>
@@ -27,9 +29,9 @@
 
     <table id="table1">
         <tr>
-            <td><a href="#" class="a_navigation"><span>首页</span></a></td>
+            <td><a href="index.html" target="_self" class="a_navigation"><span>首页</span></a></td>
             <td><a href="#" class="a_navigation"><span>视频</span></a></td>
-            <td><a href="#" class="a_navigation"><span>新闻</span></a></td>
+            <td><a href="newsDetail1.html" target="_blank" class="a_navigation"><span>新闻</span></a></td>
             <td><a href="#" class="a_navigation"><span>图集</span></a></td>
             <td><a href="#" class="a_navigation"><span>球队</span></a></td>
             <td><a href="#" class="a_navigation"><span>球员</span></a></td>
