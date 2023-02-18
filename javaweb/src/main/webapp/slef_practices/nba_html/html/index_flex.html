@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+
+    <meta charset="UTF-8">
+    <title>NBA中国官方网站首页</title>
+    <link type="text/css" href="../css/nba_flex.css" rel="stylesheet">
+    <script type="text/javascript" src="../script/jquery-3.6.3.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            // 点击图片跳转到首页
+            $("#logoImg").click(function () {
+                window.location.href = "index_flex.html";
+            });
+
+            /* 轮播图片左右切换操作 */
+            // 该数组用来做图片切换的变量存储，双头队列
+            var array1=['banner1.jpg', 'banner2.jpg', 'banner3.jpg'];
+            // 数组指针
+            var i = 0;
+
+            // 每5秒切换一次图片
+            setInterval(function () {
+                i = (i+1)%3;
+                $("#turnsImg>img:eq(1)")[0].src = "../image/" + array1[i];
+            }, 5000);
+
+            // 手动切换轮播图
+            $(".toggleOperation").click(function () {
+                if (this.id==="left") {
+                    i = (i+2)%3;
+                    $(".toggleImg")[0].src = "../image/" + array1[i];
+                } else if (this.id==="right") {
+                    i = (i+1)%3;
+                    $(".toggleImg")[0].src = "../image/" + array1[i];
+                }
+            });
+
+            // 要闻部分的新闻索引
+            $(".news").click(function () {
+                alert("将会跳转到对应新闻的详情页面");
+            });
+
+
+            // 点击图片跳转对应的详情页，只做了第一张图片的页面
+            $(".newsImgArea img").click(function () {
+                // alert(this.src)
+                // this.src.length-5 确保部署在网页上时，src的值发生变化，导致索引失效
+                window.location.href = "newsDetail" + this.src[this.src.length-5] + "_flex.html";
+            });
+
+            // 用于存储高亮标签，第一个位置用来存储sort类的高亮，第二个位置用来存储legends类的高亮
+            var array2 = ["", ""];
+
+            // 默认选中联盟排名，高亮
+            $(".sort:contains('联盟')").addClass("highlight");
+            array2[0] = "联盟排名";
+            // 显示联盟相关队伍的排名
+            $(".sort2").hide();
+
+            /*
+                没有做自动排名
+             */
+
+
+            /**
+             * 检查array2，用以确定高亮显示情况
+             */
+            var checkHighLight = function () {
+                // 全部隐藏
+                $(".sort, .legends").removeClass("highlight");
+                if (array2[0]!=="") {
+                    $(".sort:contains(" + array2[0] + ")").addClass("highlight");
+                }
+                if (array2[1]!=="") {
+                    $(".legends:contains(" + array2[1] + ")").addClass("highlight");
+                }
+            }
+
+
+            /**
+             * 检查array2，用以确定排名的显示情况
+             */
+            var checkArray = function () {
+                // 全部隐藏
+                $(".sort1, .sort2, .legendEast, .legendWest").hide();
+                var symbol;
+
+                // 显示对应的队伍排名
+                if (array2[0]==="联盟排名") {
+                    if (array2[1]==="东部联盟") {
+                        symbol = ".sort1.legendEast";
+                    } else if (array2[1]==="西部联盟") {
+                        symbol = ".sort1.legendWest";
+                    } else {
+                        symbol = ".sort1";
+                    }
+                } else if (array2[0]==="分区排名") {
+                    if (array2[1]==="东部联盟") {
+                        symbol = ".sort2.legendEast";
+                    } else if (array2[1]==="西部联盟") {
+                        symbol = ".sort2.legendWest";
+                    } else {
+                        symbol = ".sort2";
+                    }
+                } else if (array2[0]==="") {
+                    if (array2[1]==="东部联盟") {
+                        symbol = ".sort1.legendEast, .sort2.legendEast";
+                    } else if (array2[1]==="西部联盟") {
+                        symbol = ".sort1.legendWest, .sort2.legendWest";
+                    } else {
+                        symbol = ".sort1, .sort2, .legendEast, .legendWest";
+                    }
+                }
+
+                $(symbol).show();
+
+            }
+
+            // 联盟与分区排名
+            $(".sort").click(function () {
+                if (array2[0]==="") {
+                    array2[0] = this.innerText;
+                } else if (array2[0]===this.innerText) {
+                    array2[0] = "";
+                } else {
+                    // 将array2[0]设为对应值
+                    array2[0] = this.innerText;
+                }
+                checkHighLight();
+                checkArray();
+                // alert( "[" + array2[0] + "]" + "[" + array2[1] + "]")
+            });
+
+
+            // 东部与西部联盟排名
+            $(".legends").click(function () {
+                // alert(this.innerText);
+                if (array2[1]==="") {
+                    array2[1] = this.innerText;
+                } else if (array2[1]===this.innerText) {
+                    array2[1] = "";
+                } else {
+                    // 将array2[1]设为对应值
+                    array2[1] = this.innerText;
+                }
+                checkHighLight();
+                checkArray();
+                // alert( "[" + array2[0] + "]" + "[" + array2[1] + "]")
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="div0" align="center"><img id="logoImg" src="../image/logo.png" alt="相对路径图片丢失"></div>
+<!--第一个div，页面上方选项的布局-->
+<div class="options">
+    <ul>
+        <li><a href="index_flex.html" target="_self" class="a_navigation">首页</a></li>
+        <li><a href="#" class="a_navigation">视频</a></li>
+        <li><a href="newsDetail1_flex.html" target="_blank" class="a_navigation">新闻</a></li>
+        <li><a href="#" class="a_navigation">图集</a></li>
+        <li><a href="#" class="a_navigation">球队</a></li>
+        <li><a href="#" class="a_navigation">球员</a></li>
+        <li><a href="#" class="a_navigation">赛程</a></li>
+        <li><a href="#" class="a_navigation">排名</a></li>
+        <li><a href="#" class="a_navigation">数据</a></li>
+        <li><a href="#" class="a_navigation">专题</a></li>
+        <li><a href="#" class="a_navigation">更多</a></li>
+        <li>
+            <a href="#" class="a_navigation">登录</a>
+            <img src="../image/login.png">
+        </li>
+    </ul>
+
+</div>
+
+
+<!--第二个div，首页主题内容的布局-->
+<div class="substance">
+
+
+    <!--四个区域-->
+    <div id="div1">
+        <div id="turnsImg">
+            <img class="toggleOperation" id="left" src="../image/icon1.png" alt="相对路径图片丢失">
+            <img class="toggleImg" src="../image/banner1.jpg" alt="相对路径图片丢失">
+            <img class="toggleOperation" id="right" src="../image/icon2.png" alt="相对路径图片丢失">
+        </div>
+    </div>
+
+    <div id="div2">
+        <div id="newsMessage">
+            <div id="imgDiv">
+                <span>要闻</span>
+            </div>
+        <a href="#" class="news">赛季首砍两双 梅杰里：这个赛季太不容易1</a>
+        <a href="#" class="news">赛季首砍两双 梅杰里：这个赛季太不容易2</a>
+        </div>
+    </div>
+
+    <div id="div3">
+        <img id="newsInfo" src="../image/icon3.png" alt="相对路径图片丢失">
+        <span>新闻资讯</span>
+        <hr>
+<!--        <br>-->
+        <div id="newsImg">
+
+            <div class="newsImgArea">
+                <img class="newsInfoImgs1" src="../image/new01.jpg" alt="相对路径图片丢失">
+                <img class="newsInfoImgs1" src="../image/new02.jpg" alt="相对路径图片丢失">
+            </div>
+            <div class="newsImgArea">
+                <img class="newsInfoImgs2" src="../image/new03.jpg" alt="相对路径图片丢失">
+                <img class="newsInfoImgs2" src="../image/new04.jpg" alt="相对路径图片丢失">
+                <img class="newsInfoImgs2" src="../image/new05.jpg" alt="相对路径图片丢失">
+            </div>
+            <div class="newsImgArea">
+                <img class="newsInfoImgs3" src="../image/new06.jpg" alt="相对路径图片丢失">
+            </div>
+
+        </div>
+    </div>
+
+    <div id="div4">
+            <div id="rank">
+                <div class="div4_1">
+                    <span class="sort">联盟排名</span>
+                    <span class="sort">分区排名</span>
+<!--                </div>-->
+<!--                <div class="div4_1">-->
+                    <span class="legends">
+                        <img src="../image/east.png" alt="相对路径图片丢失">东部联盟
+                    </span>
+                    <span class="legends">
+                        <img src="../image/west.png" alt="相对路径图片丢失">西部联盟
+                    </span>
+                </div>
+
+                <table id="table4">
+                        <tr style="font-size: 20px">
+                            <th width="65px">排名</th>
+                            <th width="170px">姓名</th>
+                            <th width="45px">胜</th>
+                            <th width="45px">负</th>
+                            <th width="100px">胜场差</th>
+                        </tr>
+                        <tr class="sort1 legendWest">
+                            <td>1</td>
+                            <td>c-雄鹿</td>
+                            <td>55</td>
+                            <td>19</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="sort2 legendEast">
+                            <td>2</td>
+                            <td>x-猛龙</td>
+                            <td>51</td>
+                            <td>23</td>
+                            <td>4</td>
+                        </tr>
+                        <tr class="sort1 legendEast">
+                            <td>3</td>
+                            <td>x-76人</td>
+                            <td>51</td>
+                            <td>23</td>
+                            <td>4</td>
+                        </tr>
+                        <tr class="sort2 legendWest">
+                            <td>4</td>
+                            <td>x-步行者</td>
+                            <td>45</td>
+                            <td>29</td>
+                            <td>10</td>
+                        </tr>
+                        <tr class="sort1 legendEast">
+                            <td>5</td>
+                            <td>凯尔特人</td>
+                            <td>43</td>
+                            <td>31</td>
+                            <td>12</td>
+                        </tr>
+                        <tr class="sort2 legendEast">
+                            <td>6</td>
+                            <td>篮网</td>
+                            <td>38</td>
+                            <td>36</td>
+                            <td>17</td>
+                        </tr>
+                        <tr class="sort1 legendWest">
+                            <td>7</td>
+                            <td>活塞</td>
+                            <td>37</td>
+                            <td>36</td>
+                            <td>17.5</td>
+                        </tr>
+                        <tr class="sort2 legendEast">
+                            <td>8</td>
+                            <td>热火</td>
+                            <td>36</td>
+                            <td>37</td>
+                            <td>18.5</td>
+                        </tr>
+                        <tr class="sort1 legendWest">
+                            <td>9</td>
+                            <td>魔术</td>
+                            <td>51</td>
+                            <td>23</td>
+                            <td>4</td>
+                        </tr>
+                        <tr class="sort2 legendWest">
+                            <td>10</td>
+                            <td>黄蜂</td>
+                            <td>51</td>
+                            <td>23</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+
+            </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+

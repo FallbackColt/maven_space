@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+/*链接样式*/
+a {
+    text-decoration: none;
+}
+
+#div0 {
+    background-color: darkblue;
+}
+
+
+/*图片样式*/
+#logoImg {
+    border: darkblue 1px ;
+    background: darkblue;
+}
+
+
+/*导航选项样式*/
+.options {
+    background-color: darkblue;
+    justify-content: center;
+    display: flex;
+}
+
+/*导航字体*/
+.a_navigation {
+    color: cornflowerblue;
+}
+
+ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    font-size: 200%;
+    display: inline-flex;
+    /*justify-content: space-between;*/
+    list-style: none;
+}
+
+
+/*主体内容样式*/
+.substance {
+    display: flex;
+    background-color: lightblue;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+#div1 {
+    display: flex;
+    width: 35%;
+}
+
+/*轮播图*/
+#turnsImg {
+    display: flex;
+    align-items: center;
+}
+
+
+/*图片切换*/
+.toggleOperation {
+    background-color: deepskyblue;
+    width: 5%;
+}
+
+/*切换的图片*/
+.toggleImg {
+    width: 90%;
+}
+
+
+#div2 {
+    display: flex;
+    width: 35%;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+/*要闻*/
+#newsMessage {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*背景图片*/
+#imgDiv {
+    width: 100%;
+    background-image: url(../image/news.png);
+    /*background-size: 150% 150%;*/
+    font-size: 200%;
+    color: white;
+    background-repeat: no-repeat;
+    margin: 2% 0 2% 12%;
+}
+
+
+/*要闻索引*/
+.news {
+    font-size: 125%;
+    padding-left: 14%;
+    color: black;
+}
+
+
+#div3 {
+    display: flex;
+    width: 35%;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+/*新闻资讯*/
+#newsImg {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+/*新闻资讯icon*/
+#newsInfo {
+    width: 8%;
+}
+
+/*新闻资讯*/
+#newsInfo+span {
+    font-size: 275%;
+    color: darkblue;
+}
+
+.newsInfoImgArea {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*资讯图片表格*/
+#table1 {
+    border-collapse: collapse;
+    border: none;
+}
+
+/*调整图片大小*/
+.newsInfoImgs1 {
+    width: 48%;
+    border: none;
+}
+
+/*调整图片大小*/
+.newsInfoImgs2 {
+    width: 32%;
+    border: none;
+}
+
+/*调整图片大小*/
+.newsInfoImgs3 {
+    width: 96%;
+    border: none;
+}
+
+
+#div4 {
+    display: flex;
+    width: 35%;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+/*排名*/
+#rank {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.div4_1 {
+    margin-left: 1%;
+    background-color: darkgrey;
+    margin-top: 2%;
+    width: 80%;
+}
+
+/*排名*/
+.sort {
+    alignment: center;
+    font-size: 200%;
+    color: black;
+    vertical-align: bottom; /*图片与文字底部对齐*/
+    width: 100%;
+    padding: 0 11.7% 0 11.7%;
+}
+
+
+.legends {
+    alignment: center;
+    font-size: 175%;
+    color: black;
+    vertical-align: bottom;
+    width: 50%;
+    padding: 0 10.5% 0 10.5% ;
+}
+
+/*联盟icon*/
+.legends img {
+    width: 7%;
+}
+
+/*排名表*/
+#table4 {
+    margin-left: 2%;
+    margin-top: 3%;
+    border: solid 1px grey;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#table4 td, th {
+    font-size: 150%;
+    border: grey solid 1px;
+    margin: 0;
+}
+
+/*高亮*/
+.highlight {
+    color: #F50;
+}
+
+
+/*新闻详情页位置*/
+.newsSubstance {
+    width: 70%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/*标题*/
+h1 {
+    text-align: center;
+    font-size: 300%;
+}
+
+/*标题下方小字*/
+#p1 {
+    text-align: center;
+    width: 80%;
+    font-size: 180%;
+}
+
+/*新闻详情页内容*/
+.contents {
+    font-size: 225%;
+    text-indent: 2em;
+}
