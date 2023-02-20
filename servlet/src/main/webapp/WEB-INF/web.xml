@@ -14,7 +14,6 @@
         <param-value>root</param-value>
     </context-param>
 
-
     <!--servelt标签给tomcat配置Servlet程序-->
     <servlet>
         <!--给Servlet程序取一个别名(一般为类名)-->
@@ -35,20 +34,6 @@
             <param-value>jdbc:mysql://localhost:3306/test</param-value>
         </init-param>
     </servlet>
-    <servlet>
-        <servlet-name>HelloServlet2</servlet-name>
-        <servlet-class>com.test.servlet.HelloServlet2</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>HelloServlet3</servlet-name>
-        <servlet-class>com.test.servlet.HelloServlet3</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ContextServlet</servlet-name>
-        <servlet-class>com.test.servlet.ContextServlet</servlet-class>
-    </servlet>
-
-
     <!--配置Servlet程序的访问地址-->
     <servlet-mapping>
         <!--告诉服务器当前配置的地址给哪个Servlet程序使用-->
@@ -56,18 +41,104 @@
         <!--配置访问地址-->
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloServlet2</servlet-name>
+        <servlet-class>com.test.servlet.HelloServlet2</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet2</servlet-name>
         <url-pattern>/hello2</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloServlet3</servlet-name>
+        <servlet-class>com.test.servlet.HelloServlet3</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet3</servlet-name>
         <url-pattern>/hello3</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextServlet</servlet-name>
+        <servlet-class>com.test.servlet.ContextServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ContextServlet</servlet-name>
         <url-pattern>/contextServlet</url-pattern>
     </servlet-mapping>
-    
+
+    <servlet>
+        <servlet-name>RequestAPIServlet</servlet-name>
+        <servlet-class>com.test.servlet.RequestAPIServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestAPIServlet</servlet-name>
+        <url-pattern>/requestAPIServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ParameterServlet</servlet-name>
+        <servlet-class>com.test.servlet.ParameterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParameterServlet</servlet-name>
+        <url-pattern>/parameterServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Servlet1</servlet-name>
+        <servlet-class>com.test.servlet.Servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet1</servlet-name>
+        <url-pattern>/servlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Servlet2</servlet-name>
+        <servlet-class>com.test.servlet.Servlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet2</servlet-name>
+        <url-pattern>/servlet2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ForwardC</servlet-name>
+        <servlet-class>com.test.servlet.ForwardC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForwardC</servlet-name>
+        <url-pattern>/forwardC</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResponseIOServlet</servlet-name>
+        <servlet-class>com.test.servlet.ResponseIOServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResponseIOServlet</servlet-name>
+        <url-pattern>/responseIOServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Response1</servlet-name>
+        <servlet-class>com.test.servlet.Response1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Response1</servlet-name>
+        <url-pattern>/response1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Response2</servlet-name>
+        <servlet-class>com.test.servlet.Response2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Response2</servlet-name>
+        <url-pattern>/response2</url-pattern>
+    </servlet-mapping>
 
 </web-app>
