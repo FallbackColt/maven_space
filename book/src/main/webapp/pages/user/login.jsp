@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
 			
 				<div id="l_content">
 					<span class="login_word">欢迎登录</span>
-				</div>
+				</div>i
 				
 				<div id="content">
 					<div class="login_form">
