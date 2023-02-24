@@ -1,0 +1,266 @@
+@CHARSET "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*链接样式*/
+a {
+    text-decoration: none;
+    color: peru;
+}
+
+img {
+    margin: 1% 0 0 1%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 300%;
+    margin-top: 15%;
+    margin-bottom: 2%;
+}
+
+.mainBody {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.login {
+    width: 75%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 150%;
+    flex-wrap: wrap;
+}
+
+.login div div {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.login div div label {
+    text-align: left;
+    width: 8%;
+    font-size: 100%;
+}
+
+.login div div input {
+    width: 30%;
+    font-size: 100%;
+    margin: 0 0 0.5% 0;
+}
+
+.login div div:last-child input {
+    width: 5.5%;
+    font-size: 90%;
+    margin: 1%;
+}
+
+.login div div span {
+    font-size: 100%;
+    color: red;
+    margin: 0 0 0.5% 0;
+}
+
+.logined {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.logined div {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 80%;
+}
+
+.logined div span {
+    color: cornflowerblue;
+    font-size: 200%;
+    /*justify-items: center;*/
+}
+
+.logined div span[name="holdspace"] {
+    width: 75%;
+    color: cornflowerblue;
+}
+
+.simple {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.simple div {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.simple div span {
+    border: solid 1px black;
+    font-size: 270%;
+    width: 15%;
+    text-align: center;
+    color: black;
+}
+
+.simple div:first-child span {
+    font-size: 350%;
+}
+
+
+/*.simple div span:first-child {*/
+/*    width: 15%;*/
+/*}*/
+
+/*.simple div span:nth-child(2) {*/
+/*    width: 15%;*/
+/*}*/
+.simple div span:nth-child(3) {
+    width: 20%;
+}
+
+.simple div:not(:first-child) span:nth-child(3) {
+    font-size: 180%;
+}
+
+/*.simple div span:nth-child(3) {*/
+/*    width: 30%;*/
+/*}*/
+
+
+
+.detail {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.detail a {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+
+.detail a span {
+    border: solid 1px black;
+    font-size: 200%;
+    text-align: center;
+    color: black;
+}
+
+.detail a:first-child span {
+    font-size: 230%;
+}
+
+
+.detail a span {
+    width: 20%;
+}
+
+.detail a span:first-child {
+    width: 15%;
+}
+
+.detail a:not(:first-child) span:nth-child(2) {
+    font-size: 150%;
+}
+
+
+.expense {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 150%;
+    flex-wrap: wrap;
+}
+
+.expense table {
+    border: none;
+    border-collapse: collapse;
+    font-size: 125%;
+}
+
+
+.expense tr td, .expense tr th {
+    border: solid black 1px;
+    font-size: 125%;
+}
+
+.expense tr td:nth-child(1), .expense tr th:nth-child(1) {
+    width: 100%;
+}
+
+select {
+    font-size: 70%;
+    width: 25%;
+    text-align: center;
+    margin-left: 1%;
+}
+
+textarea {
+    border: none;
+    resize: none;
+    font-size: 125%;
+}
+
+tr td:last-child:not([colspan="2"]) {
+    text-align: left;
+}
+
+td input {
+    width: 35%;
+    font-size: 70%;
+    margin-left: 1%;
+}
+
+td[colspan="2"] input {
+    margin: 0 5% 0 5%;
+    width: 10%;
+    justify-content: space-around;
+    /*text-align: left;*/
+}
+
+li {
+    list-style: none;
+}
+
+.menu1 {
+    display: flex;
+    justify-content: center;
+}
+
+.menu1 div {
+    width: 15%;
+    /*border: solid 1px black;*/
+    font-size: 200%;
+    display: inline-flex;
+    /*margin-top: 1%;*/
+}
+
+
+.menu2 {
+    /*width: 70%;*/
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+
+.menu2 li {
+    border: solid 1px black;
+    font-size: 90%;
+    display: inline-flex;
+    /*margin-top: 1%;*/
+}

@@ -1,0 +1,64 @@
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>财务管理系统</title>
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" >
+    <script type="text/javascript" src="../../script/jquery-3.6.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var menu1 = $(".menu1 div:nth-child(4)");
+            var menu2 = $(".menu1 div:nth-child(4) ul");
+
+            menu1.mouseenter(function () {
+                menu2.css("display", "flex");
+            });
+
+            menu1.mouseleave(function () {
+                menu2.css("display", "none");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="mainBody">
+    <div class="logined">
+        <div>
+            <span name="holdspace"></span>
+            <span>你好：姓名，</span>
+            <span><a href="#">首页</a></span>&nbsp;&nbsp;&nbsp;
+            <span><a href="../../index.html">注销</a></span>
+        </div>
+
+        <div>
+            <div class="menu1">
+                <div>
+                    <p>人员管理</p>
+                </div>
+                <div>
+                    <p>部门管理</p>
+                </div>
+                <div>
+                    <p>审批管理</p>
+                </div>
+                <div>
+                    <p>报销申请管理</p>
+                    <ul class="menu2">
+                        <li>申请类型管理</li>
+                        <li>申请事由管理</li>
+                        <li>申请内容管理</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>报销统计</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
