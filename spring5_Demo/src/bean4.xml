@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--级联赋值-->
+    <!--第一种写法，感觉与外部注入差不多-->
+    <bean id="emp1" class="com.spring5.test.bean.Emp">
+        <property name="ename" value="fallbackcolt"></property>
+        <property name="gender" value="male"></property>
+        <!--级联赋值-->
+        <property name="dept" ref="dept1"></property>
+    </bean>
+
+    <bean id="dept1" class="com.spring5.test.bean.Dept">
+        <property name="dname" value="财务部"></property>
+    </bean>
+
+    <!--第二种写法-->
+    <bean id="emp2" class="com.spring5.test.bean.Emp">
+        <property name="ename" value="fallbackcolt"></property>
+        <property name="gender" value="male"></property>
+        <!--级联赋值-->
+        <property name="dept" ref="dept2"></property>
+        <!--
+            使用dept.dname的前提是，Emp类必须有对应的getDept()方法
+            将dept2的值重新赋值为技术部
+        -->
+        <property name="dept.dname" value="技术部"></property>
+    </bean>
+    <!--创建新的Dept对象dept2，并且初始化-->
+    <bean id="dept2" class="com.spring5.test.bean.Dept">
+        <property name="dname"><null/></property>
+    </bean>
+
+</beans>

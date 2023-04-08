@@ -30,4 +30,15 @@ public class TestBean {
         System.out.println(emp);
     }
 
+    @Test
+    public void testEmp2() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
+
+        Emp emp1 = context.getBean("emp1", Emp.class);
+        Emp emp2 = context.getBean("emp2", Emp.class);
+
+        System.out.println(emp1);
+        System.out.println(emp2);
+    }
+
 }
