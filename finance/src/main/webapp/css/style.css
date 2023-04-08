@@ -84,15 +84,15 @@ h1 {
     font-size: 80%;
 }
 
+.logined div:first-child span[name="placeholder"] {
+    width: 70%;
+    justify-content: center;
+}
+
 .logined div span {
     color: cornflowerblue;
     font-size: 200%;
     /*justify-items: center;*/
-}
-
-.logined div span[name="holdspace"] {
-    width: 75%;
-    color: cornflowerblue;
 }
 
 .simple {
@@ -119,14 +119,6 @@ h1 {
     font-size: 350%;
 }
 
-
-/*.simple div span:first-child {*/
-/*    width: 15%;*/
-/*}*/
-
-/*.simple div span:nth-child(2) {*/
-/*    width: 15%;*/
-/*}*/
 .simple div span:nth-child(3) {
     width: 20%;
 }
@@ -134,11 +126,6 @@ h1 {
 .simple div:not(:first-child) span:nth-child(3) {
     font-size: 180%;
 }
-
-/*.simple div span:nth-child(3) {*/
-/*    width: 30%;*/
-/*}*/
-
 
 
 .detail {
@@ -193,7 +180,6 @@ h1 {
     font-size: 125%;
 }
 
-
 .expense tr td, .expense tr th {
     border: solid black 1px;
     font-size: 125%;
@@ -245,7 +231,7 @@ li {
 .menu1 div {
     width: 15%;
     /*border: solid 1px black;*/
-    font-size: 200%;
+    font-size: 225%;
     display: inline-flex;
     /*margin-top: 1%;*/
 }
@@ -263,4 +249,98 @@ li {
     font-size: 90%;
     display: inline-flex;
     /*margin-top: 1%;*/
+}
+
+.userInfo, .departmentInfo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.userInfo div, .departmentInfo div {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.userInfo div span, .departmentInfo div span {
+    border: solid 1px black;
+    font-size: 225%;
+    width: 12%;
+    text-align: center;
+    color: black;
+}
+
+.userInfo div:first-child span, .departmentInfo div:first-child span{
+    font-size: 275%;
+}
+
+.userInfo div span:first-child, .departmentInfo div span:first-child {
+    width: 10%;
+}
+
+.userInfo div span:nth-child(2) {
+    width: 16%;
+}
+
+.userInfo div:not(:first-child) span:nth-child(2) {
+    font-size: 190%;
+}
+
+.userInfo div span:nth-child(5) {
+    width: 14%;
+}
+
+.userInfo div span:nth-child(6) {
+    width: 24.5%;
+}
+
+.userInfo div:not(:first-child) span:nth-child(6) {
+    font-size: 190%;
+}
+
+.userInfo div span:last-child {
+    width: 10%;
+}
+
+.option form {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 150%;
+    flex-wrap: wrap;
+}
+
+.option form table {
+    width: 70%;
+    border: none;
+    border-collapse: collapse;
+    font-size: 100%;
+}
+
+.option form tr td, .option form tr th {
+    border: solid black 1px;
+    font-size: 160%;
+}
+
+.option form tr td:nth-child(1) {
+    width: 25%;
+}
+
+.option form tr td[colspan="2"] input {
+    margin: 0 3% 0 3%;
+    width: 10%;
+    justify-content: space-around;
+    font-size: 63%;
+}
+
+/*#verifyButton {*/
+/*    width: 1%;*/
+/*}*/
+
+.message {
+    position: absolute;
+    top: 480px;
+    left: 960px;
 }

@@ -3,4 +3,97 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+
+    <servlet>
+        <servlet-name>InitService</servlet-name>
+        <servlet-class>com.practice.finance.web.InitService</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InitService</servlet-name>
+        <url-pattern>/initService</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.practice.finance.web.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdatePassword</servlet-name>
+        <servlet-class>com.practice.finance.web.UpdatePassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdatePassword</servlet-name>
+        <url-pattern>/updatePassword</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ApplyExpense</servlet-name>
+        <servlet-class>com.practice.finance.web.ApplyExpense</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplyExpense</servlet-name>
+        <url-pattern>/applyExpense</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetExpenseInfo</servlet-name>
+        <servlet-class>com.practice.finance.web.GetExpenseInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetExpenseInfo</servlet-name>
+        <url-pattern>/getExpenseInfo</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>InitExpenseInfo</servlet-name>
+        <servlet-class>com.practice.finance.web.InitExpenseInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InitExpenseInfo</servlet-name>
+        <url-pattern>/initExpenseInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>com.practice.finance.web.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetSessionInformation</servlet-name>
+        <servlet-class>com.practice.finance.web.SetSessionInformation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetSessionInformation</servlet-name>
+        <url-pattern>/setSessionInformation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateIdToName</servlet-name>
+        <servlet-class>com.practice.finance.web.UpdateIdToName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateIdToName</servlet-name>
+        <url-pattern>/updateIdToName</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateUserInfo</servlet-name>
+        <servlet-class>com.practice.finance.web.UpdateUserInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateUserInfo</servlet-name>
+        <url-pattern>/updateUserInfo</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

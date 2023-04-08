@@ -5,26 +5,38 @@ package com.practice.finance.pojo;
  * @date: 2023/2/22 15:55
  */
 public class User {
-    private Integer id;
+    private int id;
+    // 用户名
     private String username;
+    // 密码
     private String password;
-    private String position;
+    // 真实姓名
+    private String name;
+    // 职位
+    private int department;
+    // 直属上级
+    private String superior;
+    // 打款账号
+    private String account;
+
 
     public User() {
     }
 
-    public User(Integer id, String username, String password, String position) {
-        this.id = id;
+    public User(String username, String password, String name, int department, String superior, String account) {
         this.username = username;
         this.password = password;
-        this.position = position;
+        this.name = name;
+        this.department = department;
+        this.superior = superior;
+        this.account = account;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -44,22 +56,37 @@ public class User {
         this.password = password;
     }
 
-    public String getPosition() {
-        return position;
+    public String getName() {
+        return name;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", position='" + position + '\'' +
-                '}';
+    public int getDepartment() {
+        return department;
     }
+
+    public void setDepartment(int department) {
+        this.department = department;
+    }
+
+    public String getSuperior() {
+        return superior;
+    }
+
+    public void setSuperior(String superior) {
+        this.superior = superior;
+    }
+
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
 
 }

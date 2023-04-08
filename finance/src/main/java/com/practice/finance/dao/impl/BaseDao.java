@@ -26,6 +26,7 @@ public abstract class BaseDao {
      * @return -1，执行失败，其他表示影响的行数
      */
     public int update(String sql, Object ... args) {
+
         Connection connection = JdbcUtils.getConnection();
         try {
             return queryRunner.update(connection, sql, args);
@@ -34,7 +35,7 @@ public abstract class BaseDao {
         } finally {
             JdbcUtils.close(connection);
         }
-//        return -1;
+
     }
 
     /**
@@ -55,7 +56,7 @@ public abstract class BaseDao {
         } finally {
             JdbcUtils.close(connection);
         }
-//        return null;
+
     }
 
     /**
@@ -67,6 +68,7 @@ public abstract class BaseDao {
      * @param <T> 返回的类型的泛型
      */
     public <T> List<T> queryForList(Class<T> type, String sql, Object ... args) {
+
         Connection connection = JdbcUtils.getConnection();
         try {
             return queryRunner.query(connection, sql, new BeanListHandler<T>(type),args);
@@ -75,7 +77,7 @@ public abstract class BaseDao {
         } finally {
             JdbcUtils.close(connection);
         }
-//        return null;
+
     }
 
     /**
@@ -89,13 +91,12 @@ public abstract class BaseDao {
         Connection connection = JdbcUtils.getConnection();
 
         try {
-            return queryRunner.query(connection, sql, new ScalarHandler(), args);
+            return queryRunner.query(connection, sql, new ScalarHandler<>(), args);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
             JdbcUtils.close(connection);
         }
-//        return null;
 
     }
 
