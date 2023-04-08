@@ -39,7 +39,7 @@ public class RegisterServlet extends HttpServlet {
 //                保存注册信息
                 userService.registerUser(new User(null, username, password, email));
 //                跳转到注册成功页面
-                req.getRequestDispatcher("/pages/user/regist.jsp").forward(req, resp);
+                req.getRequestDispatcher("/pages/user/regist_success.jsp").forward(req, resp);
             }
 
         } else { // 不正确

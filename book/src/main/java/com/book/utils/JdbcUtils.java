@@ -19,9 +19,6 @@ public class JdbcUtils {
 
     static {
 
-
-
-
         try {
             Properties properties = new Properties();
 
